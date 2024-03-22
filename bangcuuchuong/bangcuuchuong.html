@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>bảng cửu chương</title>
+    <title>Bảng cửu chương</title>
 </head>
 <body>
-<p id="p"></p>
-</body>
+<div>
+    <h2 id="multiplication-table"></h2>
+</div>
 <script>
-    let p = '';
+    let tableHTML = '<table border="1">';
     for (let i = 2; i <= 9; i++) {
-        p += '<strong>Bảng cửu chương ' + i + ':</strong><br>';
+        tableHTML += '<tr>';
         for (let j = 1; j <= 10; j++) {
-            p += i + ' x ' + j + ' = ' + (i * j) + '<br>';
+            tableHTML += '<td>' + i + ' x ' + j + ' = ' + (i * j) + '</td>';
         }
-        p += '<br>';
+        tableHTML += '</tr>';
     }
-    document.getElementById('p').innerHTML = p;
+    tableHTML += '</table>';
+    document.getElementById('multiplication-table').innerHTML = tableHTML;
 </script>
+</body>
 </html>

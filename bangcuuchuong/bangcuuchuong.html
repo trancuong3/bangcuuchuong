@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bảng cửu chương</title>
+</head>
+<body>
+<p id="p"></p>
+</body>
+<script>
+    let p = '';
+    for (let i = 2; i <= 9; i++) {
+        p += '<strong>Bảng cửu chương ' + i + ':</strong><br>';
+        for (let j = 1; j <= 10; j++) {
+            p += i + ' x ' + j + ' = ' + (i * j) + '<br>';
+        }
+        p += '<br>';
+    }
+    document.getElementById('p').innerHTML = p;
+</script>
+</html>
